@@ -5,7 +5,7 @@ import java.util.*;
 
 public class Sample01 {
 
-	// 맴버 변수
+	// 멤버 변수
 	// private 접근 제한자
 	// int, String은 변수의 타입
 	// number, name은 변수의 이름
