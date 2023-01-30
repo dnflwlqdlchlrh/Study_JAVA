@@ -1,4 +1,4 @@
-package project01;
+package exam01;
 
 public class Smaple01 {
 	
