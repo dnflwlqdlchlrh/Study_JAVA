@@ -51,6 +51,23 @@ public class Sample01 {
 		 * 		float : 실수 값, 타입별로 저장 크기 다름(4Byte)
 		 * 		double : 실수 값, 타입별로 저장 크기 다름(8Byte)
 		 */
+		
+		
+		boolean b1 = true;		
+		boolean b2 = false;
+		
+		char c1 = 'a';
+		String s1 = "a";
+		
+		byte b3 = 1;
+		short s2 = 2;
+		int i1 = 3;
+		long l1 = 4;
+		long l2 = 4L;
+		
+		float f1 = 5.0f;
+		double d1 = 6.0;
+		
 	}
 
 }
