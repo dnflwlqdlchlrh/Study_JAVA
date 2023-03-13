@@ -78,22 +78,24 @@ public class Sample07 {
 			} else {
 				System.out.println("잘못 입력했습니다, 다시 입력하세요.");
 				System.out.print("\n");
+				continue;
 			}
 			
 			System.out.printf("컴퓨터 : %s\n%s : %s\n", cInput, user, uInput);
 			
 			switch(result) {
-				case -1 :
-					System.out.println("졌습니다");
-					break;
-				case 0 :
-					System.out.println("비겼습니다.");
-					break;
-				case 1 :
-					System.out.println("이겼습니다");
-					break;
+			case -1 :
+				System.out.println("졌습니다");
+				break;
+			case 0 :
+				System.out.println("비겼습니다.");
+				break;
+			case 1 :
+				System.out.println("이겼습니다");
+				break;
 			}
 		}
+		
 		System.out.printf("%d전 %d승 %d무 %d패", total, win, draw, lose);
 		
 
