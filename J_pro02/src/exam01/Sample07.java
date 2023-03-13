@@ -7,7 +7,7 @@ import java.util.Random;
 
 public class Sample07 {
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws IOException { 
 		/*
 		 * Random Class를 활용한 실습 가위 바위 보 문제
 		 */
