@@ -10,13 +10,17 @@ public class Sample01 {
 		 * 	현재 자바는 전 세계에서 가장 많이 사용하는 프로그래밍 언어 중 하나입니다.
 		 */
 		
+		// Person Class로 만든 객체와 인스턴스
 		Person p1 = new Person();
 		
-		p1.Upage(5);
-		p1.setPrint("안녕");
+		System.out.println("나이 : " + p1.Upage(5) + "살");
+		
+		p1.setPrint("개발도생");
+		
 		System.out.println("이름 : " + p1.getPrint());
 		
 		
+		// Member Class로 만든 객체와 인스턴스
 		Member m1 = new Member();
 		
 		m1.setName("안녕하세요.");
