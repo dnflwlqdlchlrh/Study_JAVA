@@ -1,6 +1,6 @@
 package exam07;
 
-public class Initialize {
+public class Initialize { 
 	
 	public int num1;
 	public static String name1;
