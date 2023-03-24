@@ -12,6 +12,12 @@ public class Run {
 		System.out.println(g1.getScore());
 		System.out.println(g1.getRank());
 		
+		Grade g2 = new Grade("수학", 87);
+		
+		System.out.println(g2.getName());
+		System.out.println(g2.getScore());
+		System.out.println(g2.getRank());
+		
 
 	}
 
