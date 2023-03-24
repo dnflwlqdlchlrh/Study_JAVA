@@ -1,5 +1,7 @@
 package exam01;
 
+import java.util.Arrays;
+
 public class Run {
 
 	public static void main(String[] args) {
@@ -17,6 +19,15 @@ public class Run {
 		System.out.println(g2.getName());
 		System.out.println(g2.getScore());
 		System.out.println(g2.getRank());
+		
+		Lotto lot = new Lotto();
+		
+		lot.generate(30, 27, 19);
+		System.out.println(Arrays.toString(lot.getNumbers()));
+		
+		
+		
+		
 		
 
 	}
