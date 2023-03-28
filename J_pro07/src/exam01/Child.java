@@ -8,7 +8,6 @@ public class Child extends Parent{
 	
 	public void printNumber() {
 		setNumber(3);
-		System.out.println(getNumber());
 	}
 	
 	
