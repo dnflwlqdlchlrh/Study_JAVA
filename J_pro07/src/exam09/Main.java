@@ -17,6 +17,7 @@ public class Main {
 		
 		Shape s1 = new Circle();
 		Shape s2 = new Square();
+		
 
 	}
 
