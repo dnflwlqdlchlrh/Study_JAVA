@@ -2,7 +2,7 @@ package exam01;
 
 public class Sample03 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) { 
 		/*
 		 * StringBuilder / StringBuffer
 		 *  - String은 불편(Immutable)의 특징을 가진다.
