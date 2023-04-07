@@ -15,6 +15,7 @@ public class TeacherDatabaseManager {
 		datas[0].setLoginDate(new Date());
 		
 		datas[1] = new Teacher("박선생", "1111");
+		datas[1].setLoginDate(new Date());
 	}
 	
 	public Teacher login(String name, String password) {
