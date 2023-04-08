@@ -52,6 +52,8 @@ public class MenuManager {
 				subjectModifyMenu();
 			} else if (input.equals("4")) {
 				studentDeleteMenu();
+			} else if(input.equals("5")) {
+				changePasswordMenu();
 			} else if (input.equals("9")) {
 				logout();
 				return;
@@ -61,6 +63,23 @@ public class MenuManager {
 		}
 	}
 	
+	public void changePasswordMenu() {
+		System.out.print("현재 패스워드를 입력하시오 : ");
+		String curPass = sc.nextLine();
+		
+		System.out.print("변경할 패스워드를 입력하시오 : ");
+		String changePass = sc.nextLine();
+		
+		boolean result = loginAccount.changePassword(curPass, changePass);
+		if(result) {
+			System.out.println("패스워드가 변경되었습니다.");
+		} else {
+			System.out.println("패스워드를 변경하지 못하였습니다. 현재 패스워드를 다시 입력해주세요.");
+		}
+		
+	}
+
+
 	public void studentMenu() {
 		StringBuilder menu = new StringBuilder();
 		menu.append("1. 성적 조회\n");
@@ -74,8 +93,11 @@ public class MenuManager {
 			String input = sc.nextLine();
 
 			if (input.equals("1")) {
-				serchMenu();
-			} else if (input.equals("9")) {
+				String result = _printGrades(loginAccount.getName(), ((Student)loginAccount).getGrades());
+				System.out.println(result);
+			} else if(input.equals("2")) {
+				changePasswordMenu();
+			} else if(input.equals("9")) {
 				logout();
 				return;
 			}

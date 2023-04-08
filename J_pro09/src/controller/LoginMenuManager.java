@@ -100,7 +100,7 @@ public class LoginMenuManager {
 		Student loginAccount = null;
 		
 		// 비밀번호 3회 입력 제한
-		for(int i = 0; i < 3; i++) {
+		for(int i = 0; i < 3; i++ ) {
 			System.out.print("비밀번호 : ");
 			String password = sc.nextLine();
 			loginAccount = sDB.login(username, password);

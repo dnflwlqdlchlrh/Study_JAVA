@@ -21,10 +21,15 @@ public abstract class Account {
 	}
 	
 	// 패스워드 변경
-	public abstract boolean changePassword(String curPass, String changePass);
-	
-	// 패스워드를 초기화한다.(영문자 6자를 임의로 생성하여 초기화한다.)
-	// 학생용 계정은 STD_ 접두사가 붙어서 생성되게 한다.
-	// 선생님용 계정은 TCH_ 접두사가 붙어서 생성되게 한다.
+	public boolean changePassword(String curPass, String changePass) {
+		if(curPass.equals(this.getPassword())) {
+			this.setPassword(changePass);
+			return true;
+		}
+		return false;
+		// 패스워드를 초기화한다.(영문자 6자를 임의로 생성하여 초기화한다.)
+		// 학생용 계정은 STD_ 접두사가 붙어서 생성되게 한다.
+		// 선생님용 계정은 TCH_ 접두사가 붙어서 생성되게 한다.
+	}
 	public abstract String resetPassword();
 }
