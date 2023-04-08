@@ -19,6 +19,7 @@ public class StudentMenuManager {
 	public void main() {
 		StringBuilder menu = new StringBuilder();
 		menu.append("1. 성적 조회\n");
+		menu.append("2. 패스워드 변경\n");
 		menu.append("9. 로그아웃\n");
 		menu.append("입력하세요 : ");
 

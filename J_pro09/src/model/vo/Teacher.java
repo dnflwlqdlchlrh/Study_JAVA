@@ -3,37 +3,20 @@ package model.vo;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class Teacher {
+public class Teacher extends Account{
 	
-	private String name;
-	private String password;
 	private Date loginDate;
 	
 	public Teacher(String name) {
-		this.name = name;
-		this.password = "1111";
+		setName(name);
+		setPassword("1111");
 	}
 	
 	public Teacher(String name, String password) {
-		this.name = name;
-		this.password = password;
+		setName(name);
+		setPassword(password);
 	}
 
-	public String getName() {
-		return name;
-	}
-	
-	public void setName(String name) {
-		this.name = name;
-	}
-	
-	public String getPassword() {
-		return password;
-	}
-	
-	public void setPassword(String password) {
-		this.password = password;
-	}
 
 	public Date getLoginDate() {
 		return loginDate;
@@ -46,5 +29,17 @@ public class Teacher {
 
 	public void setLoginDate(Date loginate) {
 		this.loginDate = loginate;
+	}
+	
+	@Override
+	public boolean changePassword(String curPass, String changePass) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	
+	@Override
+	public String resetPassword() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

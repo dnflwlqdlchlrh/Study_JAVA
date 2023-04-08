@@ -21,9 +21,12 @@ public class MenuManager {
 	public void main() {
 		StringBuilder menu = new StringBuilder();
 		menu.append("1. 성적 조회\n");
-		menu.append("2. 학생 정보 추가\n");
-		menu.append("3. 성적 정보 수정\n");
-		menu.append("4. 학생 정보 삭제\n");
+		if(loginAccount instanceof Teacher) {
+			menu.append("2. 학생 정보 추가\n");
+			menu.append("3. 성적 정보 수정\n");
+			menu.append("4. 학생 정보 삭제\n");
+		}
+		menu.append("5. 패스워드 변경\n");
 		menu.append("9. 로그아웃\n");
 		menu.append("입력하세요 : ");
 
