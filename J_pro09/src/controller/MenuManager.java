@@ -3,6 +3,7 @@ package controller;
 import java.util.Date;
 import java.util.Scanner;
 
+import model.vo.Account;
 import model.vo.Grade;
 import model.vo.Student;
 import model.vo.Teacher;
@@ -11,21 +12,28 @@ public class MenuManager {
 
 	private Scanner sc = new Scanner(System.in);
 	private DatabaseManager db = new DatabaseManager();
-	private Teacher loginAccount;
+	private Account loginAccount;
 	
-	public MenuManager(Teacher loginAccount) {
+	public MenuManager(Account loginAccount) {
 		this.loginAccount = loginAccount;
 	}
 	
+
 	// 학생 성적 관리의 메뉴를 관리하기 위한 매니저 클래스
 	public void main() {
+		if(loginAccount instanceof Teacher) {
+			teacherMenu();
+		} else {
+			studentMenu();
+		}
+	}
+		
+	public void teacherMenu() {
 		StringBuilder menu = new StringBuilder();
 		menu.append("1. 성적 조회\n");
-		if(loginAccount instanceof Teacher) {
-			menu.append("2. 학생 정보 추가\n");
-			menu.append("3. 성적 정보 수정\n");
-			menu.append("4. 학생 정보 삭제\n");
-		}
+		menu.append("2. 학생 정보 추가\n");
+		menu.append("3. 성적 정보 수정\n");
+		menu.append("4. 학생 정보 삭제\n");
 		menu.append("5. 패스워드 변경\n");
 		menu.append("9. 로그아웃\n");
 		menu.append("입력하세요 : ");
@@ -52,9 +60,32 @@ public class MenuManager {
 			_clear();
 		}
 	}
+	
+	public void studentMenu() {
+		StringBuilder menu = new StringBuilder();
+		menu.append("1. 성적 조회\n");
+		menu.append("2. 패스워드 변경\n");
+		menu.append("9. 로그아웃\n");
+		menu.append("입력하세요 : ");
+
+		while (true) {
+			System.out.print(menu);
+
+			String input = sc.nextLine();
+
+			if (input.equals("1")) {
+				serchMenu();
+			} else if (input.equals("9")) {
+				logout();
+				return;
+			}
+		}
+	}
 
 	private void logout() {
-		loginAccount.setLoginDate(new Date());
+		if(loginAccount instanceof Teacher) {
+			((Teacher)loginAccount).setLoginDate(new Date());
+		}
 		System.out.println(loginAccount.getName() + "님이 로그아웃 하였습니다.");
 	}
 

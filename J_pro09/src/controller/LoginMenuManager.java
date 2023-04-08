@@ -115,7 +115,7 @@ public class LoginMenuManager {
 		} else {
 			Date now = new Date();
 			System.out.println("현재 접속 시간은 " + sFormat.format(now) + " 입니다.");
-			StudentMenuManager sMenu = new StudentMenuManager(loginAccount);
+			MenuManager sMenu = new MenuManager(loginAccount);
 			sMenu.main();
 		}
 	}
