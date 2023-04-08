@@ -80,6 +80,14 @@ public class DatabaseManager implements ImplDatabaseManager {
 
 		return true;
 	}
+	
+	public Student getStudent(String name) {
+		return datas[_findIndex(name)];
+	}
+	
+	public boolean isExisted(String name) {
+		return _isExisted(name);
+	}
 
 	private boolean _isExisted(String name) {
 		return _findIndex(name) != -1 ? true : false;
@@ -97,9 +105,9 @@ public class DatabaseManager implements ImplDatabaseManager {
 		return idx;
 	}
 	
-public Student login(String name, String password) {
-		for(int i = 0; i < datas.length; i++) {
-			if(name.equals(datas[i].getName()) && password.equals(datas[i].getPassword())) {
+	public Student login(String name, String password) {
+		for (int i = 0; i < datas.length; i++) {
+			if (name.equals(datas[i].getName()) && password.equals(datas[i].getPassword())) {
 				return datas[i];
 			}
 		}

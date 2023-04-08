@@ -2,6 +2,7 @@ package model.vo;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Random;
 
 public class Teacher extends Account{
 	
@@ -33,7 +34,28 @@ public class Teacher extends Account{
 	
 	@Override
 	public String resetPassword() {
-		// TODO Auto-generated method stub
-		return null;
+		String prefix = "TCH_";
+		Random rand = new Random();
+		String newPass = "";
+		
+		int cnt = 0;
+		while(true) {
+			boolean tf = rand.nextBoolean();
+			if(tf == true) {
+				newPass += (char)(rand.nextInt(26) + 65);
+				cnt++;
+				if(cnt == 6) {
+					break;
+				}
+			}
+			if(tf == false) {
+				newPass += (char)(rand.nextInt(26) + 97);
+				cnt++;
+				if(cnt == 6) {
+					break;
+				}
+			}
+		}
+		return prefix + newPass;
 	}
 }
