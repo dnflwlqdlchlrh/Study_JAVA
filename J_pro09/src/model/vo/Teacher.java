@@ -47,7 +47,4 @@ public class Teacher {
 	public void setLoginDate(Date loginate) {
 		this.loginDate = loginate;
 	}
-	
-	
-
 }
