@@ -1,6 +1,5 @@
 package model.vo;
 
-import java.util.Random;
 
 // 학생 정보를 가지는 클래스
 public class Student extends Account {
