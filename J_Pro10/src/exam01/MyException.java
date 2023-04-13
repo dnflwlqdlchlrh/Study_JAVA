@@ -14,7 +14,7 @@ public class MyException {
 		}catch(Exception e) {
 			System.out.println("Exception을 처리하였습니다.");
 		}
-	}
+	} 
 	
 	private void exceptionRun() throws Exception {
 		// 에러를 발생 시키기 위한 메서드
