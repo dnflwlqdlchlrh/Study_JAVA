@@ -4,7 +4,6 @@ import java.util.Arrays;
 
 import model.vo.Grade;
 import model.vo.Student;
-import model.vo.Teacher;
 
 public class DatabaseManager implements ImplDatabaseManager {
 	// 학생 정보를 추가, 수정, 삭제할 수 있는 기능이 정의되어 있는 매니저 클래스
@@ -58,7 +57,11 @@ public class DatabaseManager implements ImplDatabaseManager {
 		Grade[] grades = datas[idx].getGrades();
 		for (int i = 0; i < grades.length; i++) {
 			if (subject.equals(grades[i].getName())) {
-				grades[i].setScore(score);
+				if(score >= 0 && score <= 100) {
+					grades[i].setScore(score);
+				} else {
+					grades[i].setScore(0);
+				}
 				return datas[idx];
 			}
 		}
