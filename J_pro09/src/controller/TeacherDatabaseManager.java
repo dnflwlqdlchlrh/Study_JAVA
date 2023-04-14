@@ -11,10 +11,10 @@ public class TeacherDatabaseManager {
 	// 테스트용 초기 데이터, 이후 삭제 될 예정.
 	{
 		datas = new Teacher[2];
-		datas[0] = new Teacher("고선생", "1234");
+		datas[0] = new Teacher("고선생", "a1234");
 		datas[0].setLoginDate(new Date());
 		
-		datas[1] = new Teacher("박선생", "1111");
+		datas[1] = new Teacher("박선생", "a1111");
 		datas[1].setLoginDate(new Date());
 	}
 	
